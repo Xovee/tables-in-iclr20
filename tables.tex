@@ -1,0 +1,132 @@
+
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2020_conference,times}
+
+\input{math_commands.tex}
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+
+\title{Tables in ICLR 2020: Here's What You Need to Draw Tables in \LaTeX}
+
+\author{Xovee Xu \thanks{ The templates are from \url{https://github.com/ICLR/Master-Template/blob/master/archive/iclr2020.zip}} \thanks{ Homepage: \url{https://www.xovee.cn}} \\
+School of Information and Software Engineering\\
+University of Electronic Science and Technology of China\\
+Chengdu, Sichuan, China\\
+\textit{xovee@live.com} \\
+}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\iclrfinalcopy % Uncomment for camera-ready version, but NOT for submission.
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This guideline contains tables used in the \textbf{oral presentations} papers accepted by the International Conference on Learning Representations (ICLR). We hope this guideline could help beginners of \LaTeX quickly known how to draw tables in academic papers. The referenced papers are from \url{https://openreview.net/group?id=ICLR.cc/2020/Conference#accept-talk}. 
+\end{abstract}
+
+\section{Introduction}\label{sec:introduction}
+
+Before we start, here's some necessary packages used in \LaTeX as follows:
+\begin{itemize}
+    \item \textit{amsmath}
+    \item \textit{amsfonts}
+    \item \textit{bm}
+    \item \textit{booktabs}
+    \item \textit{colortbl}
+\end{itemize}
+
+All the tables are tested with \textbf{pdfLaTeX} compiler in \hyperlink{https://www.overleaf.com/}{Overleaf}. You can use my invitation link (\url{https://www.overleaf.com?r=969b656f&rm=d&rs=b}) to start using Overleaf. 
+
+\section{Tables}\label{sec:tables}
+
+One selected table in one paper in one following subsection. 
+
+\subsection{CATER: A DIAGNOSTIC DATASET FOR
+COMPOSITIONAL ACTIONS and TEMPORAL REASONING}
+
+Table~\ref{tab:girdhar2019cater} is from Table 2(c) in \cite{girdhar2019cater}. 
+
+
+
+\begin{table}[h]
+    \caption{Performance on the (a) 14-way atomic actions recognition, (b) 301-way compositional action recognition, and (c) 36-way localization task, for different methods.}
+    \label{tab:girdhar2019cater}
+    \begin{center}
+    \begin{tabular}{llcc>{\columncolor[gray]{.85}[1pt]}ccc>{\columncolor[gray]{.85}[1pt]}ccc}
+    \toprule
+        Camera  & Model     & \#frames  & SR    & \multicolumn{3}{c}{Avg}   & \multicolumn{3}{c}{LSTM}  \\ 
+                &           &           &       & Top 1 & Top 5 & $L_1$     & Top 1 & Top 5 & $L_1$     \\ \midrule
+        -       & Random    & -         & -     & 2.8   & 13.8  & 3.9       & 2.8   & 13.8  & 3.9       \\ \arrayrulecolor[gray]{.85}\midrule
+        Static  & Tracking  & -         & -     & 33.9  & -     & 2.4       & 33.9  & -     & 2.4       \\ \midrule
+        Static  & TSN(RGB)  & 1         & -     & 7.4   & 27.0  & 3.9       & 15.3  & 50.0  & 3.0       \\ 
+        Static  & TSN(RGB)  & 3         & -     & 14.1  & 38.5  & 3.2       & 25.6  & 67.2  & 2.6       \\ 
+        Static  & TSN(Flow) & 1         & -     & 6.2   & 21.7  & 4.4       & 7.3   & 26.9  & 4.1       \\ 
+        Static  & TSN(Flow) & 3         & -     & 9.6   & 32.2  & 3.7       & 14.0  & 43.5  & 3.2       \\ \midrule
+        Static  & R3D       & 8         & 8     & 24.0  & 54.8  & 2.7       & 34.2  & 64.6  & 1.8       \\
+        Static  & R3D       & 16        & 8     & 26.2  & 56.3  & 2.6       & 24.2  & 48.9  & 2.5       \\
+        Static  & R3D       & 32        & 8     & 28.8  & 68.7  & 2.6       & 45.5  & 67.7  & 1.6       \\
+        Static  & R3D       & 64        & 8     & 57.4  & 78.4  & 1.4       & 60.2  & 81.8  & 1.2       \\ \midrule
+        Static  & R3D + NL  & 32        & 8     & 26.7  & 68.9  & 2.6       & 46.2  & 69.9  & 1.5       \\ \midrule
+        Moving  & R3D       & 32        & 8     & 23.4  & 61.1  & 2.5       & 28.6  & 63.3  & 1.7       \\
+        Moving  & R3D + NL  & 32        & 8     & 27.5  & 68.8  & 2.4       & 38.6  & 70.2  & 1.5       \\ \arrayrulecolor[gray]{0}
+    \bottomrule
+    \end{tabular}
+    \end{center}
+\end{table}
+
+
+\begin{table}[t]
+\caption{Sample table title}
+\label{sample-table}
+\begin{center}
+\begin{tabular}{ll}
+\multicolumn{1}{c}{\bf PART}  &\multicolumn{1}{c}{\bf DESCRIPTION}
+\\ \hline \\
+Dendrite         &Input terminal \\
+Axon             &Output terminal \\
+Soma             &Cell body (contains cell nucleus) \\
+\end{tabular}
+\end{center}
+\end{table}
+
+% \subsection{Tables}
+
+% All tables must be centered, neat, clean and legible. Do not use hand-drawn
+% tables. The table number and title always appear before the table. See
+% Table~\ref{sample-table}.
+
+% Place one line space before the table title, one line space after the table
+% title, and one line space after the table. The table title must be lower case
+% (except for first word and proper nouns); tables are numbered consecutively.
+
+% \begin{table}[t]
+% \caption{Sample table title}
+% \label{sample-table}
+% \begin{center}
+% \begin{tabular}{ll}
+% \multicolumn{1}{c}{\bf PART}  &\multicolumn{1}{c}{\bf DESCRIPTION}
+% \\ \hline \\
+% Dendrite         &Input terminal \\
+% Axon             &Output terminal \\
+% Soma             &Cell body (contains cell nucleus) \\
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+\subsubsection*{Acknowledgments}
+Use unnumbered third level headings for the acknowledgments. All
+acknowledgments, including those to funding agencies, go at the end of the paper.
+
+
+\bibliography{xovee}
+\bibliographystyle{iclr2020_conference}
+
+
+\end{document}
