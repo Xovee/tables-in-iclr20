@@ -159,6 +159,28 @@ Again, there's only one table in \cite{chang2020principled}, see Table~\ref{tab:
     \end{center}
 \end{table}
 
+\subsection{On the Convergence of FedAvg on Non-IID Data}
+\label{li2020convergence}
+
+Table~\ref{tab:li2020convergence} is from Table 2 in \cite{li2020convergence}. 
+
+\begin{table}[ht]
+    \caption{Statistics of federated datasets}
+    \label{tab:li2020convergence}
+    \begin{center}
+    \begin{tabular}{cccccc}
+    \toprule
+        Dataset & Details & \# Devices ($N$) & \#Training samples ($n$) & \multicolumn{2}{c}{Samples/device} \\ \cmidrule(lr){5-6}
+         & & & & mean & std \\ \midrule
+        \multirow{2}{*}{MNIST} & balanced & 100 & 54200 & 542 & 0 \\
+        & unbalanced & 100 & 62864 & 628 & 800 \\ \midrule
+        \multirow{2}{*}{Synthetic Data} & $\alpha = 0, \beta = 0$ & 100 & 42522 & 425 & 1372 \\
+        & $\alpha = 1, \beta = 1$ & 100 & 27348 & 273 & 421 \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+\end{table}
+
 % \begin{table}[ht]
 %     \caption{Caption}
 %     \label{tab:my_label}
