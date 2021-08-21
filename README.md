@@ -3,4 +3,4 @@ This repo contains LaTeX codes of tables used in the International Conference on
 
 ## Note
 
-I didn't finish this project and will not in future. Sorry. 
+There are only a few tables. I didn't finish this project and will not in future. Sorry. 
